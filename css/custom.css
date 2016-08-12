@@ -1,0 +1,106 @@
+/*
+ * TheShark34 Worthy customisations
+ */
+
+h1 span,
+h2 span,
+h3 span,
+h4 span {
+	color: #FF5500;
+}
+.text-colored {
+	color: #FF8800;
+}
+a {
+	color: #FF8800;
+}
+a:hover {
+	color: #FF5500;
+}
+
+.btn-primary { 
+  color: #ffffff; 
+  background-color: #FF5500; 
+  border-color: #fff;
+  border-width: 0px;
+}
+
+.btn-primary:hover {
+  color: #ffffff; 
+  background-color: #FF6600; 
+  border-color: #fff;
+  border-width: 0px;
+}
+
+.btn-default {
+	color: #FF8800;
+	border: 1px solid #cccccc;
+}
+
+.btn-default:hover {
+	color: #ffffff;
+	background-color: #FF6600;
+	border-color: #fff;
+}
+
+.panel-heading a {
+	font-weight: 400;
+	padding: 12px 35px 12px 15px;
+	display: inline-block;
+	width: 100%;
+	background-color: #FF8800;
+	color: #ffffff;
+	position: relative;
+	text-decoration: none;
+}
+
+.panel-heading a:hover {
+	text-decoration: none;
+	background-color: #FF8800;
+	color: #ffffff;
+}
+
+.nav-pills > li > a:hover {
+	background-color: #FF8800;
+	border-color: #FF8800;
+	color: #ffffff;
+}
+
+.default-bg.orange {
+	background-color: #FF6600;
+}
+
+.translucent-bg.orange:after {
+	background-color: rgba(255, 110, 0, 0.7);
+}
+
+.modal-header {
+	background-color: #FF8800;
+	color: #ffffff;
+}
+
+.main-navigation .navbar-default .navbar-nav > li.active > a {
+	background-color: transparent;
+	color: #FF8800;
+}
+
+.main-navigation .navbar-default .navbar-nav > li.active > a:hover {
+	color: #FF8800;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus,
+.nav-pills > li > a:hover {
+	background-color: #FF8800;
+	border-width: 0px;
+	color: #ffffff;
+}
+
+.overlay {
+	background-color: rgba(255, 110, 0, 0.9);
+}
+
+.social-links li.github a:hover {
+	color: #333333;
+}

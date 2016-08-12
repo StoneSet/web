@@ -1,0 +1,40 @@
+#launcher .component {
+    position: absolute;
+}
+
+#components {
+    float: right;
+    height: 100vh;
+    width: 250px;
+    background: black;
+    margin-top: -8px;
+    margin-right: -8px;
+    text-align: center;
+}
+
+#launcher {
+    width: calc(100% - 234px);
+    height: 100vh;
+    margin-top: -8px;
+    margin-left: -8px;
+    display: inline-block;
+    background: lightgray;
+}
+
+#button-comp {
+    width: 200px;
+    height: 25px;
+    background: white;
+}
+
+#bin {
+    background: red;
+    width: 100px;
+    height: 100px;
+}
+
+.button-component {
+    width: 100px;
+    height: 25px;
+    background: white;
+}
