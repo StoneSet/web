@@ -1,0 +1,21 @@
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+	<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+	<!-- Material Design Icons -->
+	<link rel="stylesheet" href="https://cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">
+	<!-- Ubuntu font -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i">
+
+	<!-- clipboard.js -->
+	<script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+
+	<link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+	<script src="{{ "/assets/script.js" | relative_url }}"></script>
+
+	{% include background_css.html %}
+</head>

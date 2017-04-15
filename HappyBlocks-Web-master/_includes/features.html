@@ -1,0 +1,11 @@
+<div class="features-container">
+	{% for feature in include.content %}
+	<div class="feature">
+		<i class="mdi mdi-{{ feature.icon }}"></i>
+		<div>
+			<h2>{{ feature.text }}</h2>
+			<p>{{ feature.subtext }}</p>
+		</div>
+	</div>
+	{% endfor %}
+</div>

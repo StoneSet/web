@@ -1,0 +1,213 @@
+.site-header {
+	background: #111;
+	background: #{$background};
+	border: none;
+	margin: 25px 0;
+	height: 80px;
+	line-height: 80px;
+	width: 100%;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	z-index: 10;
+
+	// Logo with flashy hover animation
+
+	.site-logo {
+		background: url("#{$navigation_logo}");
+		width: 100px;
+		height: 100px;
+		float: left;
+		background-size: contain;
+		-webkit-transition: all 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+		transition: all 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+		margin-top: -10px;
+		margin-left: 40px;
+		position: relative;
+
+		&:hover {
+			width: 120px;
+			height: 120px;
+			margin-top: -20px;
+			margin-left: 30px;
+			line-height: 120px;
+		}
+
+		&:after {
+			background: url("#{$navigation_logo}");
+			background-size: contain;
+			display: inline-block;
+			content: "";
+			vertical-align: middle;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			filter: brightness(1.5);
+		}
+
+		&:hover:after {
+			animation-name: logo-flash;
+			animation-duration: 0.4s;
+			animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+		}
+	}
+
+	@keyframes logo-flash {
+		from {
+			width: 100px;
+			height: 100px;
+			margin: 0;
+			opacity: 1;
+			margin-left: -50px;
+			margin-top: -50px;
+		}
+
+		to {
+			width: 145px;
+			height: 145px;
+			opacity: 0;
+			margin-left: -72.5px;
+			margin-top: -72.5px;
+		}
+	}
+
+	.site-title {
+		font-size: 32pt;
+		font-weight: bold;
+		color: #fff;
+		text-decoration: none;
+		margin-left: 5px;
+
+		.yellow {
+			color: #FFD700;
+		}
+
+		.grey {
+			color: #1B365D;
+		}
+
+		@media (max-width: 540px) {
+			display: none;
+		}
+	}
+
+	@keyframes title-flash {
+		from {
+			filter: brightness(1.5);
+		}
+
+		to {
+			filter: brightness(1);
+		}
+	}
+
+	.site-logo:hover ~ .site-title {
+		animation-name: title-flash;
+		animation-duration: 0.4s;
+		animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+	}
+
+	// Navigation
+
+	nav {
+		float: right;
+		margin-right: 40px;
+		position: relative;
+
+		.page-link {
+			height: 80px;
+			line-height: 80px;
+			display: inline-block;
+			color: #fff;
+			font-weight: bold;
+			-webkit-transition: all 0.05s linear;
+			transition: all 0.05s linear;
+			padding: 0 10px;
+			text-decoration: none;
+
+			.mdi {
+				font-size: 32pt;
+			}
+		}
+
+		#copy-text {
+			display: inline-block;
+			line-height: normal;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.no-clipboard {
+			display: inline-block;
+			color: #FFD700;
+			margin: 0 5px;
+		}
+
+		.split {
+			border: 1px solid rgba(255,255,255,0.5);
+			height: 100%;
+			position: absolute;
+			display: inline-block;
+		}
+
+		.page-link:hover,
+		.page-link.dropdown .dropdown-menu .dropdown-link:hover {
+			background: #FFD700;
+		}
+
+		.page-link.dropdown {
+			text-align: right;
+			position: relative;
+
+			.dropdown-menu {
+				display: none;
+			    position: absolute;
+			    right:0;
+				top: 100%;
+				box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+				min-width: 100px;
+				z-index: 12;
+
+				.dropdown-link {
+					display: block;
+					background: #222;
+				    padding: 15px 10px;
+				    line-height: normal;
+					color: #fff;
+					text-decoration: none;
+					position: relative;
+				}
+
+				.dropdown {
+					padding-left: 25px;
+
+					.dropdown-menu {
+						right: 100%;
+						top:0;
+					}
+
+					.dropdown-arrow {
+						position: absolute;
+						left:5px;
+						top:0;
+						line-height: 48px;
+					}
+				}
+			}
+		}
+
+		.dropdown:hover > .dropdown-menu {
+			display: inline-block;
+		}
+
+		@media (max-width: 1279px) {
+			display:none;
+		}
+	}
+
+	.nav-mobile {
+		display: none;
+
+		@media (max-width: 1279px) {
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,67 @@
+<header class="site-header" role="banner">
+	{% if site.navigation_logo %}
+		<a class="site-logo" href="{{ "/" | relative_url}}"></a>
+	{% endif %}
+
+	<a class="site-title" href="{{ "/" | relative_url}}"><span class="yellow">Happy</span><span class="grey">Blocks</span></a>
+
+	<nav class="nav">
+		<span id="copy-text"></span>
+		<div class="no-clipboard" data-clipboard-text="Mc.HappyBlocks.info" id="nav-copy-button">Mc.HappyBlocks.info</div>
+		<div class="split"></div>
+		{% for page in site.navigation %}
+		{% if page.dropdown %}
+		 	<div class="page-link dropdown">
+				{{ page.text | escape | replace: "launcher", "" }} &#x25BE;
+				<div class="dropdown-menu">
+					{% for dropdown in page.dropdown %}
+					<a class="dropdown-link" href="{% if dropdown.link %}{{ dropdown.link | relative_url }}{% else %}{{ dropdown.url | default: #! }}{% endif %}">{{ dropdown.text | escape | replace: "launcher", "" }}</a>
+					{% endfor %}
+				</div>
+			</div>
+		{% else %}
+			<a class="page-link" href="{% if page.link %}{{ page.link | relative_url }}{% else %}{{ page.url | default: #! }}{% endif %}">{{ page.text | escape }}</a>
+		{% endif %}
+		{% endfor %}
+	</nav>
+
+	<nav class="nav-mobile">
+		<div class="page-link dropdown">
+			<i class="mdi mdi-menu"></i>
+			<div class="dropdown-menu">
+				{% for page in site.navigation %}
+					{% if page.dropdown %}
+						<div class="dropdown-link dropdown">
+							{{ page.text | escape }}
+							<span class="dropdown-arrow">&#x25C2;</span>
+							<div class="dropdown-menu">
+								{% for dropdown in page.dropdown %}
+									<a class="dropdown-link" href="{% if dropdown.link %}{{ dropdown.link | relative_url }}{% else %}{{ dropdown.url | default: #! }}{% endif %}">{{ dropdown.text | escape }}</a>
+								{% endfor %}
+							</div>
+						</div>
+					{% else %}
+						<a class="dropdown-link" href="{% if page.link %}{{ page.link | relative_url }}{% else %}{{ page.url | default: #! }}{% endif %}">{{ page.text | escape }}</a>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</nav>
+
+	<script>
+	if (Clipboard.isSupported()) {
+		var button = document.getElementById("nav-copy-button");
+		button.className = "button";
+		button.setAttribute("title", "Cliquez pour copier");
+
+		var clipboard = new Clipboard(button);
+		clipboard.on("success",  function () {
+			document.getElementById("copy-text").innerHTML = "Adresse du serveur copiée !<br>Utilisez Ctrl+V pour la coller dans Minecraft.";
+
+			window.setTimeout(function () {
+				document.getElementById("copy-text").innerHTML = "";
+			}, 3000);
+		})
+	}
+	</script>
+</header>

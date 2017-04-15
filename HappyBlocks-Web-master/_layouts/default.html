@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{% include head.html %}
+
+<body>
+	<!--[if lt IE 9]>
+	{% include ie.html %}
+	<![endif]-->
+
+	{% include background.html %}
+
+	{% if page.dark %}
+	<div class="dark-page">
+	{% endif %}
+
+	{% include header.html %}
+	<main class="content" aria-label="Content">
+		{{ content }}
+	</main>
+
+	{% include footer.html %}
+
+	{% if page.dark %}
+	</div>
+	{% endif %}
+
+</body>
+
+</html>

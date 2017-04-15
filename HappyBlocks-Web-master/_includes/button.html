@@ -1,0 +1,8 @@
+<div class="button-container" {% if include.center == false %}style="display:inline-block;"{% else %}style="text-align:center;"{% endif %}>
+	<a {% if include.background %}style="background: {{include.background}};" {% endif %} class="{% if include.small %}small-{% endif %}button" href="{{ include.link }}">
+		{% if include.icon %}
+		<i class="mdi mdi-{{ include.icon }}"></i>
+		{% endif %}
+		<div>{{ include.text }}</div>
+	</a>
+</div>

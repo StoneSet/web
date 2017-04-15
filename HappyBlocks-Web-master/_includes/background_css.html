@@ -1,0 +1,18 @@
+{% assign numberOfBackgrounds = page.background | default: site.background | size | times: 1.0 %}
+{% assign fadePercent = 100 | divided_by:numberOfBackgrounds %}
+
+<style>
+@keyframes background {
+    0%,
+    {{ fadePercent | divided_by: 5.0 | plus: fadePercent }}% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+
+    {{ fadePercent | divided_by: 5.0 }}%,
+    {{ fadePercent }}% {
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+}
+</style>

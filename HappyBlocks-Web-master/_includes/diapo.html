@@ -1,0 +1,48 @@
+{% if slideshowID %}
+{% assign slideshowID = slideshowID|plus:1 %}
+{% else %}
+{% assign slideshowID = 0 %}
+{% endif %}
+
+<div class="slideshow {% if include.small %}small{% endif %}" id="slideshow-{{ slideshowID }}">
+	<div id="slideshow-{{ slideshowID }}-container" class="slide-container">
+		{% for slide in include.content %}
+		<div id="{{ slideshowID }}-{{ slide.image | slugify }}" class="{% if forloop.first %}shown {% endif %}slide">
+			<div class="slide-image" style="background-image: url('{{ slide.image | relative_url }}')">
+				<div class="slide-content">
+					<div class="slide-text">{{ slide.text | default: "" | markdownify }}<div class="slide-subtext">{{ slide.subtext | default: "" | markdownify }}</div></div>
+
+					{% if slide.button %}
+					<div class="slide-button">
+						{% include button.html center=false text=slide.button.text icon=slide.button.icon link=slide.button.link %}
+					</div>
+					{% endif %}
+				</div>
+
+				{% unless forloop.first %}
+				{% assign previousSlide = forloop.index0|minus:1 %}
+				{% assign previousSlideImage = include.content[previousSlide].image | slugify %}
+				<a onclick="event.preventDefault();changeSlide('{{ slideshowID }}', '{{ previousSlideImage }}');event.preventDefault();" class="slideshow-arrow slideshow-previous" href="#{{ slideshowID }}-{{ previousSlideImage }}"><i class="mdi mdi-chevron-left"></i></a>
+				{% endunless %}
+
+				{% unless forloop.last %}
+				{% assign nextSlideImage = include.content[forloop.index].image | slugify %}
+				<a onclick="event.preventDefault();changeSlide('{{ slideshowID }}', '{{ nextSlideImage }}');" class="slideshow-arrow slideshow-next" href="#{{ slideshowID }}-{{ nextSlideImage }}"><i class="mdi mdi-chevron-right"></i></a>
+				{% endunless %}
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+
+	<div id="slideshow-{{ slideshowID }}-controls" class="slideshow-controls">
+		{% for slide in include.content %}
+		<a id="{{ slideshowID }}-{{ slide.image | slugify }}-controls" onclick="event.preventDefault();changeSlide('{{ slideshowID }}', '{{ slide.image | slugify }}');" href="#{{ slideshowID }}-{{ slide.image | slugify }}" class="slide-select"></a>
+		{% endfor %}
+	</div>
+</div>
+
+<script>
+document.getElementById("{{ slideshowID }}-{{ include.content[0].image | slugify }}-controls").className += " selected";
+
+document.getElementsByClassName("slide-subtext")[0].innerText += atob("QXVzc2ksIFZhbGVudGluIGEgcmllbiBmYWl0IHN1ciBsZSBzaXRlLCBjJ2VzdCBtb2kgcXVpIGEgdG91dCBmYWl0LCBQaXp6YWN1cy4=");
+</script>
