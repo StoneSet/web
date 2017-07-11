@@ -1,5 +1,5 @@
 /*
- * TheShark34 Worthy customisations
+ * StoneSet Worthy customisations
  */
 
 h1 span,
@@ -18,16 +18,16 @@ a:hover {
 	color: #FF5500;
 }
 
-.btn-primary { 
-  color: #ffffff; 
-  background-color: #FF5500; 
+.btn-primary {
+  color: #ffffff;
+  background-color: #FF5500;
   border-color: #fff;
   border-width: 0px;
 }
 
 .btn-primary:hover {
-  color: #ffffff; 
-  background-color: #FF6600; 
+  color: #ffffff;
+  background-color: #FF6600;
   border-color: #fff;
   border-width: 0px;
 }

@@ -1,21 +1,22 @@
-/* Theme Name: Worthy - Free Powerful Theme by HtmlCoder
- * Author:HtmlCoder
- * Author URI:http://www.htmlcoder.me
- * Version:1.0.0
- * Created:November 2014
- * License: Creative Commons Attribution 3.0 License (https://creativecommons.org/licenses/by/3.0/)
- * File Description: Initializations of plugins 
- */
+/*
+Theme Name: Worthy - Free Powerful Theme by HtmlCoder & StoneSet
+Author:StoneSet & HtmlCoder
+Author URI:http://www.htmlcoder.me & http://stoneset.github.io/
+Version:1.0.2
+Created:July 2017
+License: Creative Commons Attribution 3.0 License (https://creativecommons.org/licenses/by/3.0/)
+File Description: Custom Animations
+*/
 
 (function($){
 	$(document).ready(function(){
-	
+
 		$(".banner-image").backstretch('images/banner.jpg');
-		
+
 		// Fixed header
 		//-----------------------------------------------
 		$(window).scroll(function() {
-			if (($(".header.fixed").length > 0)) { 
+			if (($(".header.fixed").length > 0)) {
 				if(($(this).scrollTop() > 0) && ($(window).width() > 767)) {
 					$("body").addClass("fixed-header-on");
 				} else {
@@ -25,7 +26,7 @@
 		});
 
 		$(window).load(function() {
-			if (($(".header.fixed").length > 0)) { 
+			if (($(".header.fixed").length > 0)) {
 				if(($(this).scrollTop() > 0) && ($(window).width() > 767)) {
 					$("body").addClass("fixed-header-on");
 				} else {
@@ -38,7 +39,7 @@
 		//-----------------------------------------------
 		if($(".scrollspy").length>0) {
 			$("body").addClass("scroll-spy");
-			$('body').scrollspy({ 
+			$('body').scrollspy({
 				target: '.scrollspy',
 				offset: 152
 			});
