@@ -9,6 +9,7 @@ File Description: Custom Animations
 */
 /* Typography
 ----------------------------------------------------------------------------- */
+@import url('https://use.fontawesome.com/releases/v5.0.9/css/all.css');
 body {
 	font-family: 'Open Sans', sans-serif;
 }
@@ -359,8 +360,8 @@ blockquote {
 	background-color: #333333;
 }
 .panel-heading a:after {
-	font-family: "FontAwesome";
-	content: "\f147";
+  font-family: 'Font Awesome\ 5 Free';
+	content: "\f146";
 	position: absolute;
 	right: 15px;
 	font-size: 14px;
@@ -370,7 +371,7 @@ blockquote {
 	margin-top: -7px;
 }
 .panel-heading a.collapsed:after {
-	content: "\f196";
+	content: "\f0fe";
 }
 .panel-heading a:hover {
 	text-decoration: none;
