@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>StoneSet.me</h1>
+  <h1>StoneSet.fr</h1>
   <h3>My website !</h3>
   <p>
     <a href="https://discord.gg/qN3YSd3"><img src="https://discordapp.com/api/guilds/470378849968979970/embed.png"></a>
@@ -22,4 +22,4 @@ You will need :
 3. Atom.io
 
 
-#### [Website](https://stoneset.me)
+#### [Website](https://stoneset.fr)
