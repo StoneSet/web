@@ -41,6 +41,9 @@
     <link href="css/style.css" rel="stylesheet">
     <!-- Custom css -->
     <link href="css/custom.css" rel="stylesheet">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Ads -->
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({
@@ -157,7 +160,7 @@
     <!-- banner end -->
     <!-- section start -->
     <!-- ================ -->
-    <div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+    <div class="section clearfix object-non-visible" data-animation-effect="fadeIn" data-aos="fade-right"></>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -316,7 +319,7 @@
     <!-- Fin de section -->
     <!-- section start -->
     <!-- ================ -->
-    <div class="section translucent-bg bg-image-1 orange">
+    <div class="section translucent-bg bg-image-1 orange" data-aos="fade-left">
         <div class="container object-non-visible" data-animation-effect="fadeIn">
             <h1 id="services" class="text-center title">Mon expérience</h1>
             <div class="space"></div>
@@ -461,7 +464,7 @@
 
     <!-- section start -->
     <!-- ================ -->
-    <div class="default-bg space orange">
+    <div class="default-bg space orange" data-aos="fade-up">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
@@ -476,7 +479,7 @@
     <!-- Fin de section -->
     <!-- section start -->
     <!-- ================ -->
-    <div class="default-bg space orange">
+    <div class="default-bg space orange" data-aos="fade-up">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
@@ -488,7 +491,7 @@
     <!-- Fin de section -->
     <!-- section start -->
     <!-- ================ -->
-    <div class="section">
+    <div class="section" data-aos="fade-right">
         <div class="container">
             <h1 class="text-center title" id="portfolio">Portfolio</h1>
             <div class="separator"></div>
@@ -1160,7 +1163,7 @@
         <div class="container object-non-visible" data-animation-effect="fadeIn">
             <h1 id="clients" class="title text-center">Avis clients</h1>
             <div class="space"></div>
-            <div class="row">
+            <div class="row" data-aos="fade-left">
                 <div class="col-md-4">
                     <div class="media testimonial">
                         <div class="media-left">
@@ -1274,7 +1277,7 @@
     <footer id="footer">
         <!-- .footer start -->
         <!-- ================ -->
-        <div class="footer section">
+        <div class="footer section" data-aos="fade-right">
             <div class="container">
                 <h1 class="title text-center" id="contact">Me contacter</h1>
                 <div class="space"></div>
@@ -1420,6 +1423,10 @@
 
         ga('create', 'UA-83970868-1', 'auto');
         ga('send', 'pageview');
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
 </body>
 
