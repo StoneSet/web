@@ -107,3 +107,8 @@ a:hover {
 .social-links li.github a:hover {
     color: #333333;
 }
+
+.aboutme {
+    background-color: #ffffff;
+    padding: 0px 0;
+}
