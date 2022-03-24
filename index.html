@@ -290,6 +290,7 @@
                                             <div class="panel-body">
                                                 <p>Avec trois amis, nous concevons la RetroBox une petite console portative, open-source disponible sur le github de RetroBox!</p>
                                                 <p>Avec son écran couleur, est basée sur un raspberry pi zero W, un os (RetroPie) avec notre surcouche, les premiers tests sont assez concluant ! Un kickstarter sera bientôt lancé...</p>
+                                                <p>Je fais aussi beaucoup d'électronique pour des projets personnels, courant faible de préference.</p>
                                                 <center>
                                                     <img src="https://static.retrobox.tech/img/assemblage/soldering.jpg" />
                                                 </center>
@@ -304,7 +305,7 @@
                                         </div>
                                         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                             <div class="panel-body">
-                                                <p>Lorsque j'ai du temps libre, je rédige des articles sur mon <a href="http://blog.valentinderouet.fr/fr">blog</a>, ça peut être des conneries, des hacks, des réparations etc. J'essaye d'être le plus pédagogue
+                                                <p>Lorsque j'ai du temps libre, je rédige des articles sur mon <a href="http://blog.stoneset.fr/fr">blog</a>, ça peut être des conneries, des hacks, des réparations etc. J'essaye d'être le plus pédagogue
                                                     pour que ça soit facile à reproduire, il n'y a pas de ligne éditoriale directrice, j'écris quand les idées sont présentes. Dans le futur, j'essayerais d'y détailler mes projets ou mes restaurations de
                                                     matériels.
                                                 </p>
@@ -319,7 +320,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingFour">
                                             <h4 class="panel-title">
-                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">De la restauration</a>
+                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">De la restauration & de la Hi-Fi</a>
                                             </h4>
                                         </div>
                                         <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
@@ -328,7 +329,10 @@
                                                     Je rénove plein de matériels Hi-Fi, j'achète quand ça marche pas et je répare ! J'ai mon petit plus pour tout ce qui est analogique, les amplis vintage sont ceux qui sont le plus intéressant à réparer.
                                                 </p>
                                                 <p>Je me constitue un système audio au fur et à mesure de mes affaires, j'essaye de monter en gamme dès que je peux.</p>
-                                                <p>Je fais aussi quelques analyses acoustiques : mesure de réponse fréquentielle de haut-parleurs, créations de filtres sur mesure pour des enceintes (cf. le site de <a href="https://www.petoindominique.fr/">Dominique Petoin</a>                                                    qui est excellent dans la matière)
+                                                <p>Je fais aussi quelques analyses acoustiques : mesure de réponse fréquentielle de haut-parleurs, créations de filtres sur mesure pour des enceintes (cf. le site de <a href="https://www.petoindominique.fr/">Dominique Petoin</a> qui est excellent dans la matière)
+                                                </p>
+                                                <p>
+                                                    J'essaye de m'informer et apprendre un maximum sur le monde de l'acoustique, je suis passionné de la Hi-Fi et j'espère pouvoir un jour faire de la conception d'enceinte sur mesure.
                                                 </p>
                                                 <center>
                                                     <img src="https://vistapointe.net/images/marantz-5.jpg" />
@@ -518,14 +522,14 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <p>En 2018 nous avons ouvert Thingmill. Cela nous permet d'avoir un commerce autour de nos projets. Nous sommes soutenus par la chambre de commerce de Normandie, ce qui nous permet d'avoir des facilitées
-                                                        administratives. Trois personnes représentent Thingmill, Étienne Chevrollier, Matthieu Bessat et moi, cela fait plusieurs années qu'on se connait, on travail donc ensemble avec facilité.
+                                                        administratives. Trois personnes représentent Thingmill, Étienne Chevrollier, Matthieu Bessat et moi, cela fait plusieurs années que l'on se connaît, on travaille donc ensemble avec facilité.
                                                     </p>
                                                     <p>
-                                                        L'objectif de Thingmill est simple : rendre service pour n'importe quelle demande. Nous travaillons avec tous types de professionels, pour de la conception web, electronique ou encore 3D. Nous prennons de nouveaux projets lorsque nous avons du temps libre,
+                                                        L'objectif de Thingmill est simple : rendre service pour n'importe quelle demande. Nous travaillons avec tous types de professionnels, pour de la conception web, électronique ou encore 3D. Nous prenons de nouveaux projets lorsque nous avons du temps libre,
                                                         le tout est hebergé dans nos propres serveurs qui sont tous dans notre baie.
                                                     </p>
                                                     <p>
-                                                        J'interviens donc pour la maintenance du réseau chez Thingmill. Toute l'infrastructure de l'entreprise est gérée par l'équipe. Je m'occupe aussi de l'administration de l'entreprise et de la conception de certain projet (qui sont dans mon domaine de compétences).
+                                                        J'interviens donc pour la maintenance du réseau chez Thingmill. Toute l'infrastructure de l'entreprise est gérée par l'équipe. Je m'occupe aussi de l'administration de l'entreprise et de la conception de certains projets (qui sont dans mon domaine de compétence).
                                                     </p>
                                                     <p>
                                                         Notre site web : <a href='https://thingmill.fr'>https://thingmill.fr</a> .
@@ -573,7 +577,13 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <p>
-
+                                                        Matthieu de Thingmill, a conçu l'api de RetroBox de A à Z. Je suis venu rajouter un système de CI/D pour vérifier le bon fonctionnement de l'API avant de la mettre en production. L'objectif est simple : éviter les failles de sécuriter et s'assurer que tout le système fonctionne même après de grosse modification.
+                                                    </p>
+                                                    <p>
+                                                        Pour faire cela j'ai utilisé l'utilitaire "Karate", gratuit et open-source, cet outil de scripting est très puissant. (Voir leur site <a href="https://github.com/karatelabs/karate">ici</a>).
+                                                    </p>
+                                                    <p>
+                                                        L'api test de RetroBox utilisent pleins de technologies différentes : requêtes HTTP, SQL, websocket... Au final, je participe activement sur tous les repos du projet RetroBox, que ça soit du soft ou hard.
                                                     </p>
                                                     <p>
                                                         Le lien du repo : <a href="https://github.com/retrobox/api-test">ici</a>
@@ -636,10 +646,10 @@
                                                         </ul>
                                                     </p>
                                                     <p>
-                                                        On peut dire que c'est une très petite infra, c'est vrai, mais c'est déjà suffisant pour nous. Nous avons appris plein de choses en sécurités en montant tout ça. La charge des différents sites hébérgés par Thingmill est réparties entre plusieurs VM.
+                                                        On peut dire que c'est une très petite infra, c'est vrai, mais c'est déjà suffisant pour nous. Nous avons appris plein de choses en sécurités en montant tout ça. La charge des différents sites hébergés par Thingmill est réparties entre plusieurs VM.
                                                     </p>
                                                     <P>
-                                                        L'objectif a terme est d'agrandir notre infra en rajoutant d'autre cluster pour pouvoir handle plus de requetes. Mais aussi, cela n'est pas reservé que pour Thingmill, je me sers de tout ça pour tester des technologies ou simplement à apprendre de nouvelles
+                                                        L'objectif à terme est d'agrandir notre infra en rajoutant d'autres clusters pour pouvoir handle plus de requêtes. Mais aussi, cela n'est pas réservé que pour Thingmill, je me sers de tout ça pour tester des technologies ou simplement à apprendre de nouvelles
                                                         choses.
                                                     </P>
 
@@ -682,14 +692,19 @@
                                             <h4 class="modal-title" id="project-4-label">RetroBox - Console</h4>
                                         </div>
                                         <div class="modal-body">
-                                            <h3>La retrobox est la nouvelle gameboy améliorée !</h3>
+                                            <h3>La RetroBox est la nouvelle gameboy améliorée !</h3>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <p>La Retrobox est une console portative, open-source qui tourne sur RetroPie, vous pouvez rejouer à tous les jeux de votre enfance, avec son autonomie de 6 heures vous allez passer des heures de plaisirs
+                                                    <p>La Retrobox est une console portative, open-source qui tourne sur RetroPie, vous pouvez rejouer à tous les jeux de votre enfance, avec son autonomie de 6 heures vous allez passer des heures de plaisir
                                                     </p>
                                                     <p>
-                                                        J'ai réalisé l'électronique de la console. Je suis parti d'une feuille blanche pour ensuite faire plusieurs ébauches. Le schéma en soit n'est vraiment pas compliqué, j'ai passé énormement de temps cependant sur la board. J'ai procédé à la création des
-                                                        librairies sur mesure pour les différents composants et l'étude
+                                                        J'ai réalisé l'électronique de la console. Je suis parti d'une feuille blanche pour ensuite faire plusieurs ébauches. Le schéma en soi n'est vraiment pas compliqué, j'ai passé énormément de temps cependant sur la board.
+                                                    </p>
+                                                    <p>
+                                                        J'ai procédé à la création de librairie sur mesure pour les différents composants de la console et placé ergonomiquement tous les I/O. Je suis vraiment content du rendu final, je la trouve très réussie pour un produit amateur.
+                                                    </p>
+                                                    <p>
+                                                        Toute une <a href="https://retrobox.tech/fr/docs/home">documentation</a> a été redigé sur le montage de la console, le tout avec des notions d'électronique. Objectif : apprendre en s'amusant.
                                                     </p>
                                                     <p>
                                                         Notre site : <a href="http://retrobox.tech">ici</a>
@@ -717,6 +732,9 @@
                                                             </div>
                                                             <div class="item">
                                                                 <img src="images\schematics.png" alt="Schéma électronique de la console">
+                                                            </div>
+                                                            <div class="item">
+                                                                <img src="https://static.retrobox.tech/img/docs/others/IMG_0123.jpg" alt="La console une fois montée">
                                                             </div>
                                                         </div>
                                                         <a class="left carousel-control" href="#retroboxgalerie" data-slide="prev">
