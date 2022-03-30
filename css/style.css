@@ -15,6 +15,7 @@ File Description: Custom Animations
 @import url('https://use.fontawesome.com/releases/v5.0.9/css/all.css');
 body {
     font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 .site-name {
@@ -182,7 +183,7 @@ blockquote {
 
 .banner-caption {
     position: absolute;
-    top: 40%;
+    top: 29%;
     width: 100%;
     z-index: 2;
 }
@@ -354,7 +355,7 @@ blockquote {
 }
 
 .subfooter p {
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
 
 

@@ -1,6 +1,29 @@
 /*
- * StoneSet Worthy customisations
+ * StoneSet customisations
  */
+
+/* RESPONSIVE */
+
+@media (max-width: 500px) {
+    .site-name-and-slogan {
+        display: none;
+    }
+    .banner-caption {
+        top: 20%;
+    }
+    html.js.no-touch.csstransitions body.no-trans.scroll-spy div#banner.banner div.banner-caption div.container div.row div.col-md-8.col-md-offset-2.object-non-visible.aos-init.aos-animate h1.text-center {
+        font-size: 400%;
+    }
+    .section, .section-timeline {
+        padding: 40px 0px 40px 0px !important;
+    }
+}
+
+@media (max-height: 680px) {
+    html.js.no-touch.csstransitions body.no-trans.scroll-spy div#banner.banner div.banner-caption div.container div.row div.col-md-8.col-md-offset-2.object-non-visible.aos-init.aos-animate h1.text-center {
+        font-size: 300% !important;
+    }
+}
 
 h1 span,
 h2 span,
@@ -113,7 +136,7 @@ a:hover {
     padding: 0px 0;
 }
 
-.section {
+.section, .section-timeline {
     padding: 40px;
 }
 
@@ -137,7 +160,7 @@ ul.timeline:before {
     background: #fff;
     display: inline-block;
     position: absolute;
-    left: 16px;
+    left: 2px;
     width: 4px;
     height: 100%;
     z-index: 400;
@@ -152,12 +175,12 @@ li.timeline-item {
 /* Timeline item arrow */
 
 .timeline-arrow {
-    border-top: 0.5rem solid transparent;
-    border-right: 0.5rem solid #fff;
-    border-bottom: 0.5rem solid transparent;
+    border-top: 1rem solid transparent;
+    border-right: 1rem solid #524F4F;
+    border-bottom: 1rem solid transparent;
     display: block;
     position: absolute;
-    left: 2rem;
+    left: 16px;
 }
 
 
@@ -170,7 +193,7 @@ li.timeline-item::before {
     position: absolute;
     border-radius: 50%;
     border: 3px solid #fff;
-    left: 11px;
+    left: -3px;
     width: 14px;
     height: 14px;
     z-index: 400;
