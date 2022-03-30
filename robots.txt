@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://valentinderouet.fr/sitemap.xml
