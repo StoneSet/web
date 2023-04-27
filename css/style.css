@@ -870,3 +870,15 @@ textarea {
     -webkit-transform: scale(1);
     transform: scale(1);
 }
+
+.logo_metier {
+    width: 15%;
+    position: relative;
+    float: right;
+}
+
+.logo_metier_thingmill {
+    width: 30%;
+    position: relative;
+    float: right;
+}
